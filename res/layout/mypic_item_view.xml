@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <TextView 
+        android:id="@+id/vTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="15dp"
+        android:text="이 곳은 Title 입니다."/>
+    
+    <ImageView 
+        android:id="@+id/mImage"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:src="@drawable/ic_launcher"/>
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp">
+    
+	    <TextView 
+	        android:id="@+id/vDate"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="right"
+	        android:text="이 곳은 날짜 입니다."/>
+        
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        
+        <Button
+            android:id="@+id/saveBoard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="게시판에 저장하기"
+            android:textSize="10dp"
+            android:layout_weight="1"/>
+        
+        <Button
+            android:id="@+id/saveSns"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SNS 에 알리기"
+            android:textSize="10dp"
+            android:layout_weight="1"/>
+        
+        <Button
+            android:id="@+id/deletePic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="삭제하기"
+            android:textSize="10dp"
+            android:layout_weight="1"/>
+        
+    </LinearLayout>
+    
+    
+</LinearLayout>    

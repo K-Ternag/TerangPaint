@@ -1,0 +1,48 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+    	android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	android:orientation="vertical"
+    	android:background="#EEEEF0">
+    	
+    	<LinearLayout 
+    	    android:id="@+id/boardSearch"
+    	    android:layout_width="fill_parent"
+    	    android:layout_height="wrap_content"
+    	    android:orientation="horizontal"
+    	    android:background="#3366FF">
+    	    
+    	    <Spinner
+    	        android:id="@+id/boardSpinner"
+    	        android:layout_width="wrap_content"
+    	        android:layout_height="wrap_content"
+    	        android:scrollbars="none"
+    	        android:entries="@array/boardTPentry"/>
+    	    
+    	    <EditText 
+    	        android:id="@+id/boardEdit"
+    	        android:layout_width="wrap_content"
+    	        android:layout_height="wrap_content"
+        		android:ems="10"
+        		android:textColor="#FFFFFF"
+        		android:background="#00000000"/>
+    	    
+    	    <Button 
+    	        android:id="@+id/boardButton"
+    	        android:layout_width="wrap_content"
+    	        android:layout_height="wrap_content"
+    	        android:text="찾기"/>
+    	</LinearLayout>
+    	
+    	<ListView
+    	    android:id="@+id/viewList"
+    	    android:layout_width="match_parent"
+    	    android:layout_height="wrap_content">
+    	</ListView>
+    </LinearLayout>
+
+</FrameLayout>

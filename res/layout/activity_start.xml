@@ -1,0 +1,164 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+    	android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	android:orientation="vertical"
+    	android:background="#EEEEF0"
+    	android:id="@+id/mainPage"
+	    android:padding= "10dp">
+    	
+    	<TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="paint board"
+            android:textColor="#000000" />
+    	
+        <LinearLayout 
+	    	android:layout_width="match_parent"
+	    	android:layout_height="wrap_content"
+	    	android:orientation="vertical"
+	    	android:background="#ffffff">
+	    	<LinearLayout 
+	    	    android:layout_width="fill_parent"
+	    	    android:layout_height="wrap_content"
+	    	    android:orientation="vertical"
+	    	    android:gravity="center"
+	    	    android:paddingTop="10dp">
+	    	    <TextView 
+	    	        android:layout_width="fill_parent"
+	    	        android:layout_height="wrap_content"
+	    	        android:gravity="center"
+	    	        android:text="인기 그림!!!"
+            		android:textColor="#000000"/>
+	    	    <ImageView 
+	    	        android:id="@+id/bestPic"
+	    	        android:layout_width="250dp"
+	    	        android:layout_height="200dp"
+	    	        android:src="@drawable/ic_launcher"/>
+	    	</LinearLayout>
+        </LinearLayout>
+        
+    	<LinearLayout 
+    	    android:layout_width="fill_parent"
+    	    android:layout_height="wrap_content"
+    	    android:orientation="vertical"
+    	    android:gravity="center"
+    	    android:paddingTop="20dp">
+    	    <TextView 
+    	        android:layout_width="fill_parent"
+    	        android:layout_height="wrap_content"
+    	        android:gravity="center"
+    	        android:text="최근 그림들!!!"
+            	android:textColor="#000000"/>
+    	</LinearLayout>
+    	<LinearLayout 
+    	    android:layout_width="fill_parent"
+    	    android:layout_height="wrap_content"
+    	    android:orientation="horizontal"
+    	    android:gravity="center"
+    	    android:paddingTop="10dp">
+    	    <ImageView 
+    	        android:id="@+id/currentPic01"
+    	        android:layout_width="match_parent"
+    	        android:layout_height="70dp"
+    	        android:layout_weight="1"
+    	        android:src="@drawable/ic_launcher"/>
+    	    <ImageView 
+    	        android:id="@+id/currentPic011"
+    	        android:layout_width="match_parent"
+    	        android:layout_height="70dp"
+    	        android:layout_weight="1"
+    	        android:src="@drawable/ic_launcher"/>
+    	</LinearLayout>
+    	<LinearLayout 
+    	    android:layout_width="fill_parent"
+    	    android:layout_height="wrap_content"
+    	    android:orientation="horizontal"
+    	    android:gravity="center"
+    	    android:paddingTop="3dp">
+    	    <ImageView 
+    	        android:id="@+id/currentPic02"
+    	        android:layout_width="match_parent"
+    	        android:layout_height="70dp"
+    	        android:layout_weight="1"
+    	        android:src="@drawable/ic_launcher"/>
+    	    <ImageView 
+    	        android:id="@+id/currentPic021"
+    	        android:layout_width="match_parent"
+    	        android:layout_height="70dp"
+    	        android:layout_weight="1"
+    	        android:src="@drawable/ic_launcher"/>
+    	</LinearLayout>
+    	<LinearLayout 
+    	    android:layout_width="fill_parent"
+    	    android:layout_height="wrap_content"
+    	    android:orientation="horizontal"
+    	    android:gravity="center"
+    	    android:paddingTop="3dp">
+    	    <ImageView 
+    	        android:id="@+id/currentPic03"
+    	        android:layout_width="match_parent"
+    	        android:layout_height="70dp"
+    	        android:layout_weight="1"
+    	        android:src="@drawable/ic_launcher"/>
+    	    <ImageView 
+    	        android:id="@+id/currentPic031"
+    	        android:layout_width="match_parent"
+    	        android:layout_height="70dp"
+    	        android:layout_weight="1"
+    	        android:src="@drawable/ic_launcher"/>
+    	</LinearLayout>
+    </LinearLayout>
+    
+    <LinearLayout
+    	android:id="@+id/slidingPage01"
+    	android:layout_width="250dp"
+    	android:layout_height="300dp"
+    	android:orientation="vertical"
+    	android:layout_gravity="bottom|right"
+    	android:background="#888888"
+    	android:visibility="gone">
+		    <Button android:layout_height="wrap_content"
+		            android:layout_width="match_parent"
+		            android:text="@string/manual"
+		            android:onClick=" " />
+		    <Button android:layout_height="wrap_content"
+		            android:layout_width="match_parent"
+		            android:text="@string/board"
+		            android:onClick="launchGoBoard" />
+		    <Button android:layout_height="wrap_content"
+		            android:layout_width="match_parent"
+		            android:text="@string/drawing"
+		            android:onClick="launchDrawing" />
+		    <Button android:layout_height="wrap_content"
+		            android:layout_width="match_parent"
+		            android:text="@string/mypic"
+		            android:onClick="launchMypicture" />
+		    <Button android:layout_height="wrap_content"
+		            android:layout_width="match_parent"
+		            android:text="@string/end"
+		            android:onClick=" " />
+    </LinearLayout>
+    
+    <LinearLayout
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:orientation="vertical"
+    	android:layout_gravity="right|bottom"
+    	android:background="#00000000">
+		<Button  
+			android:id="@+id/button1"
+		    android:layout_width="wrap_content" 
+		    android:layout_height="wrap_content" 
+		    android:text="Menu"
+		    android:onClick="onButton1Clicked"
+		    />
+	</LinearLayout>
+
+</FrameLayout>

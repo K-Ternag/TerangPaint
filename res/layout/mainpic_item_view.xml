@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF" >
+    
+    <TextView 
+        android:id="@+id/bTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="이 곳은 Title 입니다."/>
+    
+    <ImageView 
+        android:id="@+id/bImage"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_launcher"/>
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+	    android:gravity="right">
+    
+	    <TextView 
+	        android:id="@+id/bUser"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="User 입니다."
+            android:textSize="10dp"
+	        android:layout_marginRight="30dp"/>
+    
+	    <TextView 
+	        android:id="@+id/bDate"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+            android:textSize="10dp"
+	        android:text="이 곳은 날짜 입니다."/>
+        
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        
+        <Button
+            android:id="@+id/saveComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="댓글 달기"
+            android:textSize="7dp"
+            android:layout_weight="1"/>
+        
+        <Button
+            android:id="@+id/checkLike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="좋아요!"
+            android:textSize="7dp"
+            android:layout_weight="1"/>
+        
+        <Button
+            android:id="@+id/deleteBItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="삭제하기"
+            android:textSize="7dp"
+            android:layout_weight="1"/>
+        
+    </LinearLayout>
+        
+        <EditText
+            android:id="@+id/editComment"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Comment 를 입력하세요!"
+            android:text=""/>
+        
+    	<ListView
+    	    android:id="@+id/commentList"
+    	    android:layout_width="match_parent"
+    	    android:layout_height="wrap_content">
+    	</ListView>
+    
+    
+</LinearLayout>    
