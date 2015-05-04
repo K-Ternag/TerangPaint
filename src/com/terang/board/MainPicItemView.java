@@ -149,7 +149,7 @@ public class MainPicItemView extends Activity {
 					commentEdit.setHint("Comment 를 입력하세요!");
 				} else {
 					//url = "http://192.168.0.12:3303/instcomment";
-					url = "http://180.68.37.108:9999/instcomment";
+					url = "http://180.68.48.157:9999/instcomment";
 					new insertComment().execute();
 
 					mAdapter.addItem(new MainPicCommentListItem("0", commentEdit.getText().toString(), null));
@@ -166,7 +166,7 @@ public class MainPicItemView extends Activity {
 			@Override
 			public void onClick(View v) {
 				//url = "http://192.168.0.12:3303/contentsLike";
-				url = "http://180.68.37.108:9999/contentsLike";
+				url = "http://180.68.48.157:9999/contentsLike";
 				new updateState().execute();
 				Toast.makeText(getApplicationContext(), "이 글이 좋아요!!", Toast.LENGTH_LONG).show();
 			}
@@ -177,7 +177,7 @@ public class MainPicItemView extends Activity {
 			@Override
 			public void onClick(View v) {
 				//url = "http://192.168.0.12:3303/contentDelete";
-				url = "http://180.68.37.108:9999/contentDelete";
+				url = "http://180.68.48.157:9999/contentDelete";
 				new updateState().execute();
 				Toast.makeText(getApplicationContext(), listTitle+"를 삭제하였습니다!!", Toast.LENGTH_LONG).show();
 				finish();
@@ -217,7 +217,7 @@ public class MainPicItemView extends Activity {
 			HttpClient httpClient = new DefaultHttpClient();
 			HttpContext localContext = new BasicHttpContext();
 			//HttpGet httpGet = new HttpGet("http://192.168.0.12:3303/listscomments/"+listID);
-			HttpGet httpGet = new HttpGet("http://180.68.37.108:9999/listscomments/"+listID);
+			HttpGet httpGet = new HttpGet("http://180.68.48.157:9999/listscomments/"+listID);
 			String text = null;
 			try {
 				HttpResponse response = httpClient.execute(httpGet, localContext);
