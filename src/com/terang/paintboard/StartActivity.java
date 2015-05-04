@@ -381,7 +381,7 @@ public class StartActivity extends Activity {
 			String text = null;
 			try {
 				HttpClient httpClient = new DefaultHttpClient();
-				HttpPost httpPost = new HttpPost("http://180.68.37.108:9999/insertUser");
+				HttpPost httpPost = new HttpPost("http://180.68.48.157:9999/insertUser");
 				String Json = null;
 				
 				JSONObject jsonObject = new JSONObject();	
@@ -440,7 +440,7 @@ public class StartActivity extends Activity {
 			HttpClient httpClient = new DefaultHttpClient();
 			HttpContext localContext = new BasicHttpContext();
 			//HttpGet httpGet = new HttpGet("http://192.168.0.12:3303/listscomments/"+listID);
-			HttpGet httpGet = new HttpGet("http://180.68.37.108:9999/checkUser/"+DevID);
+			HttpGet httpGet = new HttpGet("http://180.68.48.157:9999/checkUser/"+DevID);
 			String text = null;
 			try {
 				HttpResponse response = httpClient.execute(httpGet, localContext);
@@ -521,7 +521,7 @@ public class StartActivity extends Activity {
 			String text = null;
 			try {
 				HttpClient httpClient = new DefaultHttpClient();
-				HttpPost httpPost = new HttpPost("http://180.68.37.108:9999/mkUserdir");
+				HttpPost httpPost = new HttpPost("http://180.68.48.157:9999/mkUserdir");
 				String Json = null;
 				
 				JSONObject jsonObject = new JSONObject();	
@@ -578,7 +578,7 @@ public class StartActivity extends Activity {
 			HttpClient httpClient = new DefaultHttpClient();
 			HttpContext localContext = new BasicHttpContext();
 			//HttpGet httpGet = new HttpGet("http://192.168.0.12:3303/lists");
-			HttpGet httpGet = new HttpGet("http://180.68.37.108:9999/listMain");
+			HttpGet httpGet = new HttpGet("http://180.68.48.157:9999/listMain");
 			String text = null;
 			try {
 				HttpResponse response = httpClient.execute(httpGet, localContext);
@@ -624,7 +624,7 @@ public class StartActivity extends Activity {
 						dateStr = items.getString("c_date");
 						cntLike = "Like "+items.getString("c_like");
 						cntView = "View "+items.getString("c_cnt");
-						photoUriStr = "http://180.68.37.108:9999/img/" + userStr + "/" +items.getString("c_img");
+						photoUriStr = "http://180.68.48.157:9999/img/" + userStr + "/" +items.getString("c_img");
 
 						addMain(i, photoUriStr, userStr);
 					}
