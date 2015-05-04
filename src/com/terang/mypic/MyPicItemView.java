@@ -180,7 +180,7 @@ public class MyPicItemView extends Activity {
 			File file = new File(BasicInfo.FOLDER_HANDWRITING + listURI);
 			Future uploading = Ion.with(this)
 					//.load("http://192.168.0.12:3303/upload")
-					.load("http://180.68.37.108:9999/upload")
+					.load("http://180.68.48.157:9999/upload")
 					.setMultipartParameter("c_user", user_id)
 					.setMultipartFile("image", file)
 					.asString()
@@ -233,7 +233,7 @@ public class MyPicItemView extends Activity {
 			String text = null;
 			try {
 				HttpClient httpClient = new DefaultHttpClient();
-				HttpPost httpPost = new HttpPost("http://180.68.37.108:9999/uploaddb");
+				HttpPost httpPost = new HttpPost("http://180.68.48.157:9999/uploaddb");
 				String Json = null;
 				
 				JSONObject jsonObject = new JSONObject();	
