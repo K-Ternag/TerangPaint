@@ -139,7 +139,7 @@ public class MainPictureActivity extends Activity {
 			public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
 	    		Log.d(TAG, "Click List Items.");
 	    		//url = "http://192.168.0.12:3303/viewlist";
-	    		url = "http://180.68.37.108:9999/viewlist";
+	    		url = "http://180.68.48.157:9999/viewlist";
 				viewMemo(position);
 			}
 		});
@@ -177,7 +177,7 @@ public class MainPictureActivity extends Activity {
 			HttpClient httpClient = new DefaultHttpClient();
 			HttpContext localContext = new BasicHttpContext();
 			//HttpGet httpGet = new HttpGet("http://192.168.0.12:3303/lists");
-			HttpGet httpGet = new HttpGet("http://180.68.37.108:9999/lists");
+			HttpGet httpGet = new HttpGet("http://180.68.48.157:9999/lists");
 			String text = null;
 			try {
 				HttpResponse response = httpClient.execute(httpGet, localContext);
@@ -228,7 +228,7 @@ public class MainPictureActivity extends Activity {
 						cntLike = items.getString("c_like");
 						cntView = items.getString("c_cnt");
 						cntReply = items.getString("c_reply");
-						photoUriStr = "http://180.68.37.108:9999/img/" + userStr + "/" +items.getString("c_img");
+						photoUriStr = "http://180.68.48.157:9999/img/" + userStr + "/" +items.getString("c_img");
 
 						mAdapter.addItem(new MainPicListItem(memoId, titleStr, userStr, dateStr, photoUriStr, cntLike, cntView, cntReply));
 					}
@@ -267,7 +267,7 @@ public class MainPictureActivity extends Activity {
 			HttpClient httpClient = new DefaultHttpClient();
 			HttpContext localContext = new BasicHttpContext();
 			//HttpGet httpGet = new HttpGet("http://192.168.0.12:3303/lists");
-			HttpGet httpGet = new HttpGet("http://180.68.37.108:9999/listUser/"+boardEdit.getText().toString());
+			HttpGet httpGet = new HttpGet("http://180.68.48.157:9999/listUser/"+boardEdit.getText().toString());
 			String text = null;
 			try {
 				HttpResponse response = httpClient.execute(httpGet, localContext);
@@ -318,7 +318,7 @@ public class MainPictureActivity extends Activity {
 						cntLike = items.getString("c_like");
 						cntView = items.getString("c_cnt");
 						cntReply = items.getString("c_reply");
-						photoUriStr = "http://180.68.37.108:9999/img/" + userStr + "/" +items.getString("c_img");
+						photoUriStr = "http://180.68.48.157:9999/img/" + userStr + "/" +items.getString("c_img");
 
 						mAdapter.addItem(new MainPicListItem(memoId, titleStr, userStr, dateStr, photoUriStr, cntLike, cntView, cntReply));
 					}
@@ -357,7 +357,7 @@ public class MainPictureActivity extends Activity {
 			HttpClient httpClient = new DefaultHttpClient();
 			HttpContext localContext = new BasicHttpContext();
 			//HttpGet httpGet = new HttpGet("http://192.168.0.12:3303/lists");
-			HttpGet httpGet = new HttpGet("http://180.68.37.108:9999/listTitle/"+boardEdit.getText().toString());
+			HttpGet httpGet = new HttpGet("http://180.68.48.157:9999/listTitle/"+boardEdit.getText().toString());
 			String text = null;
 			try {
 				HttpResponse response = httpClient.execute(httpGet, localContext);
@@ -408,7 +408,7 @@ public class MainPictureActivity extends Activity {
 						cntLike = items.getString("c_like");
 						cntView = items.getString("c_cnt");
 						cntReply = items.getString("c_reply");
-						photoUriStr = "http://180.68.37.108:9999/img/" + userStr + "/" +items.getString("c_img");
+						photoUriStr = "http://180.68.48.157:9999/img/" + userStr + "/" +items.getString("c_img");
 
 						mAdapter.addItem(new MainPicListItem(memoId, titleStr, userStr, dateStr, photoUriStr, cntLike, cntView, cntReply));
 					}
